@@ -1,0 +1,41 @@
+%reset-indent {
+  margin: 0;
+  padding: 0;
+}
+
+%reset-list {
+  @extend %reset-indent;
+  list-style-type: none;
+}
+
+%stretch {
+  &-full {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &-horizontal {
+    left: 0;
+    right: 0;
+  }
+
+  &-vertical {
+    top: 0;
+    bottom: 0;
+  }
+}
+
+%f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%img-cover {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

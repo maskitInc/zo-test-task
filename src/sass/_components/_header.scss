@@ -1,0 +1,9 @@
+.header {
+  @import "_header/_subheader";
+  @import "_header/_search-form";
+  @import "_header/_actions";
+
+  @include wrapper();
+
+  position: relative;  
+}

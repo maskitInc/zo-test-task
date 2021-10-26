@@ -1,0 +1,42 @@
+// fonts
+// prefix f- means "font"
+
+$f-regular: "Open Sans", sans-serif; // font-weight normal | 400
+$f-dense: "Poppins", sans-serif; // font-weight 500-Medium 600-semiBold 700-Bold
+
+// Font base
+
+$f-color: $text-base !default;
+$f-size: 14px !default;
+$f-line-height: auto !default;
+
+// Font sizes
+
+$f-size_xxxxl: $f-size + 18; // 32
+$f-size_xxxl: $f-size + 12; // 26
+$f-size_xxl: $f-size + 8; // 22
+$f-size_xl: $f-size + 4; // 18
+$f-size_l: $f-size + 3; // 17
+$f-size_m: $f-size + 1; // 15
+$f-size_base: $f-size; // 14
+$f-size_s: $f-size - 2; // 12
+
+// Line heights
+
+$f-line-height_xxxxl: 140px;
+
+// $f-line-height_xxxxl: $f-line-height + 121; // 140
+// $f-line-height_xxxl: $f-line-height + 20; // 39
+// $f-line-height_xxl: $f-line-height + 14; // 33
+// $f-line-height_xl: $f-line-height + 8; // 27
+// $f-line-height_l: $f-line-height + 4; // 23
+// $f-line-height_m: $f-line-height + 3; // 22
+// $f-line-height_base: $f-line-height; // 19
+// $f-line-height_s: $f-line-height - 3; // 16
+
+// Font weight
+
+$f-weight_normal: 400;
+$f-weight_medium: 500;
+$f-weight_semi: 700;
+$f-weight_bold: 900;

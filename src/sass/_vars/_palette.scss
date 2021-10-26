@@ -1,0 +1,22 @@
+// global colors
+
+// base palette
+$black: #000;
+$white: #fff;
+
+$grey: #151515;
+$grey-light: #A9A9A9;
+
+$accent: #6A983C;
+
+// additional сolors
+$violet: #665eaa;
+
+// Reassigning
+// Text
+$text-base: $grey;
+$text-secondary: $grey-light;
+$text-link: $accent;
+
+// Decorations
+$border-light-grey: fade-out(rgba($grey, 1), .95);

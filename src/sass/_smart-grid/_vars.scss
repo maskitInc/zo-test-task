@@ -1,0 +1,53 @@
+$columns: 12;
+$atom: (100% / $columns);
+
+$break_bp_1600: 1600px;
+$break_bp_1440: 1440px;
+$break_bp_1366: 1366px;
+$break_bp_1280: 1280px;
+$break_bp_1100: 1100px;
+$break_bp_960: 960px;
+$break_bp_800: 800px;
+$break_bp_768: 768px;
+$break_bp_560: 560px;
+$break_bp_375: 375px;
+$break_bp_360: 360px;
+
+$offset: 30px;
+$offset_bp_1600: 20px;
+$offset_bp_1440: 20px;
+$offset_bp_1366: 24px;
+$offset_bp_1280: 24px;
+$offset_bp_1100: 24px;
+$offset_bp_960: 24px;
+$offset_bp_800: 24px;
+$offset_bp_768: 24px;
+$offset_bp_560: 16px;
+$offset_bp_375: 16px;
+$offset_bp_360: 16px;
+
+$offset_one_side: ($offset / 2);
+$offset_bp_1600_one_side: ($offset_bp_1600 / 2);
+$offset_bp_1440_one_side: ($offset_bp_1440 / 2);
+$offset_bp_1366_one_side: ($offset_bp_1366 / 2);
+$offset_bp_1280_one_side: ($offset_bp_1280 / 2);
+$offset_bp_1100_one_side: ($offset_bp_1100 / 2);
+$offset_bp_960_one_side: ($offset_bp_960 / 2);
+$offset_bp_800_one_side: ($offset_bp_800 / 2);
+$offset_bp_768_one_side: ($offset_bp_768 / 2);
+$offset_bp_560_one_side: ($offset_bp_560 / 2);
+$offset_bp_375_one_side: ($offset_bp_375 / 2);
+$offset_bp_360_one_side: ($offset_bp_360 / 2);
+
+$fields: 52px;
+$fields_bp_1600: 48px;
+$fields_bp_1440: 36px;
+$fields_bp_1366: 24px;
+$fields_bp_1280: 24px;
+$fields_bp_1100: 24px;
+$fields_bp_960: 24px;
+$fields_bp_800: 24px;
+$fields_bp_768: 24px;
+$fields_bp_560: 16px;
+$fields_bp_375: 16px;
+$fields_bp_360: 16px;

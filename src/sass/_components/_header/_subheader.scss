@@ -1,0 +1,31 @@
+.subheader {
+  @include row-flex;
+  border-bottom: 1px solid $border-light-grey;
+  padding: $indent_m 0;
+
+  .col {
+    @include col;
+    @include size(6);
+    @include size-bp_768(6);
+
+    display: flex;
+  }
+
+  ul.contacts {
+    li {
+      @include indent-not-last-child('right', $indent_xxxl);
+      
+      a {
+
+      }
+    }
+  }
+
+  nav.links {
+    justify-content: flex-end;
+
+    a {
+      @include indent-not-last-child('right', $indent_xxxl);
+    }
+  }
+}
