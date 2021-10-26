@@ -1,8 +1,9 @@
+@import "_smart-grid/_index";
+
 @import "vars";
-@import "fonts";
 @import "libs";
-@import "_mixins/_smart-grid";
-@import "_utilities.scss";
+@import "placeholders";
+@import "mixins";
 @import "_animations.scss";
 
 *,
@@ -18,8 +19,8 @@
 @include reset;
 
 ::selection {  
-	background-color: #FDB815;
-	color: #fff;
+	background-color: $accent;
+	color: $white;
 }
 
 html, body{
@@ -27,12 +28,12 @@ html, body{
 }
 	
 body {
-	font-size: 16px;
+  @extend %text-style_Body;
+
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
-	font-family: $f-regular;
 	overflow-x: hidden;
+	font-family: $f-regular;
 }
 
 .main {
@@ -50,6 +51,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $text-link;
 }
 
 button, input {
@@ -85,7 +87,7 @@ input {
 }
 
 strong {
-  font-family: $f-bold;
+  font-family: $f-dense;
 }
 
 .hidden {

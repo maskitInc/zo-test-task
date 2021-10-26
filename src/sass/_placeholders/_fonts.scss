@@ -1,0 +1,54 @@
+// Set of text styles from the project design system https://www.figma.com/file/ebllL8nU38491qfM3kTra5/eCommerce---Template---Figma?node-id=46%3A4
+
+%text-style {
+  &_S1 {
+    font-weight: $f-weight_semi;
+    font-size: $f-size_xxxxl;
+    line-height: $f-line-height_xxxxl;
+  }
+
+  &_S2 {
+    font-weight: $f-weight_semi;
+    font-size: $f-size_xxxl;
+  }
+
+  &_S3 {
+    font-weight: $f-weight_semi;
+    font-size: $f-size_xxl;
+  }
+
+  &_S4 {
+    font-weight: $f-weight_semi;
+    font-size: $f-size_xl;
+  }
+
+  &_S5 {
+    font-weight: $f-weight_medium;
+    font-size: $f-size_m;
+  }
+
+  &_S6 {
+    font-weight: $f-weight_semi;
+    font-size: $f-size_s;
+  }
+
+  &_Caption {
+    font-weight: $f-weight_normal;
+    font-size: $f-size_s;
+  }
+
+  &_Button {
+    font-weight: $f-weight_bold;
+    font-size: $f-size_m;
+  }
+
+  &_Lead {
+    font-weight: $f-weight_normal;
+    font-size: $f-size_l;
+  }
+
+  &_Body {
+    font-weight: $f-weight_normal;
+    font-size: $f-size_m;
+  }
+}
