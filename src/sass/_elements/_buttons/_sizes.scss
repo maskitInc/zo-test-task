@@ -1,0 +1,159 @@
+&.--responsive {
+  padding: $indent_xs $indent_m;
+
+  @media #{$tablet-avg-and-up} {
+    padding: $indent_s $indent_xl;
+  }
+
+  @media #{$desktop-avg-and-up} {
+    padding: $indent_m $indent_xxxxl;
+  }
+
+  &.--with-icon {
+    &.--only {
+      padding: $indent_xs;
+
+      @media #{$tablet-avg-and-up} {
+        padding: $indent_s;
+      }
+
+      @media #{$desktop-avg-and-up} {
+        padding: $indent_m;
+      }
+
+      .icon {
+        width: $icon-size_l;
+      }
+    }
+
+    &.--right {
+      padding: $indent_xs $indent_xs $indent_xs $indent_m;
+
+      @media #{$tablet-avg-and-up} {
+        padding: $indent_s $indent_s $indent_s $indent_xl;
+      }
+
+      @media #{$desktop-avg-and-up} {
+        padding: $indent_m $indent_xxl $indent_m $indent_xxxxl;
+      }
+
+      .icon {
+        margin-left: $indent_xxs;
+
+        @media #{$tablet-avg-and-up} {
+          margin-left: $indent_xs;
+        }
+
+        @media #{$desktop-avg-and-up} {
+          margin-left: $indent_s;
+        }
+      }
+    }
+
+    &.--left {
+      padding: $indent_xs $indent_m $indent_xs $indent_xs;
+
+      @media #{$tablet-avg-and-up} {
+        padding: $indent_s $indent_xl $indent_s $indent_s;
+      }
+
+      @media #{$desktop-avg-and-up} {
+        padding: $indent_m $indent_xxxxl $indent_m $indent_xxl;
+      }
+
+      .icon {
+        margin-right: $indent_xxs;
+
+        @media #{$tablet-avg-and-up} {
+          margin-right: $indent_xs;
+        }
+
+        @media #{$desktop-avg-and-up} {
+          margin-right: $indent_s;
+        }
+      }
+    }
+  }
+}
+
+&.--s {
+  padding: $indent_xs $indent_m;
+
+  &.--with-icon {
+    &.--only {
+      padding: $indent_xs;
+    }
+
+    &.--right {
+      padding: $indent_xs $indent_xs $indent_xs $indent_m;
+
+      .icon {
+        margin-left: $indent_xxs;
+      }
+    }
+
+    &.--left {
+      padding: $indent_xs $indent_m $indent_xs $indent_xs;
+
+      .icon {
+        margin-right: $indent_xxs;
+      }
+    }
+  }
+}
+
+&.--m {
+  padding: $indent_s $indent_xl;
+
+  &.--with-icon {
+    &.--only {
+      padding: $indent_s;
+    }
+
+    &.--right {
+      padding: $indent_s $indent_s $indent_s $indent_xl;
+
+      .icon {
+        margin-left: $indent_xs;
+      }
+    }
+
+    &.--left {
+      padding: $indent_s $indent_xl $indent_s $indent_s;
+
+      .icon {
+        margin-right: $indent_xs;
+      }
+    }
+  }
+}
+
+&.--l {
+  padding: $indent_m $indent_xxxxl;
+
+  &.--with-icon {
+    &.--only {
+      padding: $indent_m;
+
+      .icon {
+        width: $icon-size_l;
+      }
+    }
+
+    &.--right {
+      padding: $indent_m $indent_xxl $indent_m $indent_xxxxl;
+
+      .icon {
+        margin-left: $indent_s;
+      }
+    }
+
+    &.--left {
+      padding: $indent_m $indent_xxxxl $indent_m $indent_xxl;
+
+      .icon {
+        margin-right: $indent_s;
+      }
+    }
+  }
+}

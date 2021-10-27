@@ -1,0 +1,30 @@
+.list {
+  &.--simple {
+    li {
+      @include indent-not-last-child('bottom', $indent_xs);
+
+      p {
+        margin-bottom: $indent_xs;
+      }
+      
+      ul {
+        margin-left: $indent_xs;
+        
+      }
+    }
+  }
+
+  &.--inline {
+    @include indent-not-last-child('bottom', $indent_xs);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent_m;
+
+    li {
+      &.--full-width {
+        flex: 1;
+      }
+    }
+  }
+}

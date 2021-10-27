@@ -1,0 +1,16 @@
+.guide-block {
+  @include indent-not-last-child('bottom', $indent_xl);
+
+  .guide-block--i {
+    @include indent-not-last-child('bottom', $indent_s);
+
+    h4 {
+      margin-bottom: $indent_xs;
+    }
+
+    h5 {
+      margin-bottom: $indent_xs;
+      color: $text-additional;
+    }
+  }
+}

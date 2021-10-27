@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="title col --col-12">
+    <h3>Styles</h3>
+  </div>
+
+  <div class="guide-block col --col-4">
+    <div class="guide-block--i">
+      <h4>Colors:</h4>
+      <ul class="list --simple">
+        <li><b>--simple</b> - on white bg;</li>
+        <li><b>--stroke</b> - with primary border on white bg;</li>
+        <li><b>--colored</b> - with primary border on primary bg;</li>
+        <li><b>--bright</b> - on light grey bg</li>
+      </ul>
+    </div>
+
+    <div class="guide-block--i">
+      <h5>Examples</h5>
+      <ul class="list --inline">
+        <li>
+          <partial src="elements/button--icon-only.html" styles-btn="--responsive --with-icon --only --stroke" src-icon="img/icons.svg#ic-chevron-right" styles-icon="--fill-transparent"></partial>
+        </li>
+        <li>
+          <partial src="elements/button--text-only.html" styles-btn="--responsive --simple" value-btn="Simple"></partial>
+        </li>
+        <li>
+          <partial src="elements/button--text-with-icon.html" styles-btn="--responsive --with-icon --right --bright" value-btn="Bright Right" src-icon="img/icons.svg#ic-chevron-right" styles-icon="--fill-transparent"></partial>
+        </li>
+        <li>
+          <partial src="elements/button--text-only.html" styles-btn="--responsive --colored" value-btn="Colored"></partial>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="guide-block col --col-4">
+    <div class="guide-block--i">
+      <h4>Sizes:</h4>
+      <ul class="list --simple">
+        <li>Responsive: <b>'--responsive'</b></li>
+        <li>Non-responsive Sizes: <b>'--s', '--m', '--l'</b></li>
+        <li>Full width: <b>'--full-width'</b></li>
+      </ul>
+    </div>
+
+    <div class="guide-block--i">
+      <h5>Examples</h5>
+      <ul class="list --inline">
+        <li>
+          <partial src="elements/button--icon-only.html" styles-btn="--s --with-icon --only --colored" src-icon="img/icons.svg#ic-actions-search" styles-icon="--fill-transparent"></partial>
+        </li>
+        <li>
+          <partial src="elements/button--text-with-icon.html" styles-btn="--with-icon --s --right --stroke" value-btn="--s" src-icon="img/icons.svg#ic-chevron-right" styles-icon="--fill-transparent"></partial>
+        </li>
+        <li>
+          <partial src="elements/button--text-with-icon.html" styles-btn="--with-icon --m --left --colored" value-btn="--m" src-icon="img/icons.svg#ic-chevron-left" styles-icon="--fill-transparent"></partial>
+        </li>
+        <li>
+          <partial src="elements/button--text-with-icon.html" styles-btn="--with-icon --l --right --bright" value-btn="--l" src-icon="img/icons.svg#ic-chevron-right" styles-icon="--fill-transparent"></partial>
+        </li>
+        <li class="--full-width">
+          <partial src="elements/button--text-with-icon.html" styles-btn="--responsive --w-100 --with-icon --left --simple" value-btn="Responsive Full width" src-icon="img/icons.svg#ic-chevron-left" styles-icon="--fill-transparent"></partial>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="guide-block col --col-4">
+    <div class="guide-block--i">
+      <h4>Extra:</h4>
+      <ul class="list --simple">
+        <li><b>'--inline'</b> - only used if button should be inline in text
+          <partial src="elements/button--text-with-icon.html" styles-btn="--with-icon --s --left --colored --inline" value-btn="Simple Left" src-icon="img/icons.svg#ic-chevron-left" styles-icon="--fill-transparent"></partial>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+// Transitions
+$transition-time-ease: .3s ease;
+$transition-all: all $transition-time-ease;
+
+// Borders
+
+// Sizes
+$border-size: 1px;
+$border-size_thick: 2px;
+
+// Radius
+$border-radius_small: 4px;
+$border-radius: 12px;
+
+// Styles
+$border-grey-light: $border-size solid $grey-light;
+$border-grey-lightest: $border-size solid $grey-almost-white;
+
+$border-primary: $border-size_thick solid $primary-dark;
+$border-primary-light: $border-size_thick solid $primary-light;
+
+
+// Shadows
+$shadow-color--dark: fade-out($black, 0.8);
+
+$shadow-size--small: 0 6px 12px -3px;
+$shadow-size--big: 0 12px 24px 0;
+
+$shadow--small: $shadow-size--small $shadow-color--dark;
+$shadow--big: $shadow-size--big $shadow-color--dark;
+
+
+
+
+// Transforms
+
+$transform--show: translateY(0%) translateZ(0);
+$transform--hide--top: translateY(-120%) translateZ(0);
+$transform--hide--bottom: translateY(120%) translateZ(0);
+
+
+// Icons
+
+$icon--arrow-down: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M%200%209%20L%204.5%204.5%20L%200%200%22%20transform%3D%22translate(5.75%203.75)%20rotate(90%202.25%204.5)%22%20fill%3D%22transparent%22%20stroke-width%3D%222%22%20stroke%3D%22rgb(136%2C%20136%2C%20136)%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E");

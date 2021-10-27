@@ -1,0 +1,29 @@
+.guide-part {
+  h2,
+  h3 {
+    margin-bottom: $indent_xl;
+  }
+
+  .row {
+    @include row-flex;
+    @include indent-not-last-child('bottom', $indent_xl);
+  }
+
+  .col {
+    @include col;
+    
+    display: flex;
+    flex-direction: column;
+
+    &.--col-12 {
+      @include size(12);
+    }
+
+    &.--col-4 {
+      @include size(4);
+      @include size-bp_960(6);
+      @include size-bp_768(12);
+      // @include size-bp_560(12);
+    }
+  }
+}

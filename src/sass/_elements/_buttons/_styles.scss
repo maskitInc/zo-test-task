@@ -1,0 +1,108 @@
+&.--simple {
+  $btn-color: $white;
+
+  background-color: $btn-color;
+  border-radius: $border-radius;
+  transition: $transition-all;
+
+  .icon {
+    svg {
+      stroke: $grey;
+    }
+  }
+
+  .value {
+    color: $grey;
+  }
+
+  &:hover {
+    background: darken($btn-color, 5%);
+    transition: $transition-all;
+  }
+}
+
+&.--stroke {
+  $btn-color: $white;
+  @include create-fake-border($border-primary-light, $border-radius);
+
+  background-color: $btn-color;
+  transition: $transition-all;
+
+  .icon {
+    svg {
+      stroke: $primary;
+    }
+  }
+
+  .value {
+    color: $grey;
+  }
+
+  &:hover {
+    background: lighten($primary, 50%);
+    transition: $transition-all;
+  }
+}
+
+&.--colored {
+  $btn-color: $primary;
+  @include create-fake-border($border-primary, $border-radius);
+
+  background-color: $btn-color;
+  transition: $transition-all;
+
+  .icon {
+    svg {
+
+      stroke: $white;
+      color: #A4DFD1;
+      use {
+        all: inherit;
+        // fill:red;
+        stroke: $white;
+        color: #A4DFD1;
+
+        #ic-chevron-left {
+         stroke: $white;
+        }
+     }
+
+    }
+  }
+
+  .value {
+    color: $white;
+  }
+
+  &:hover {
+    background: darken($btn-color, 5%);
+    transition: $transition-all;
+  }
+}
+
+&.--bright {
+  $btn-color: $grey-bright;
+
+  background-color: $btn-color;
+  border-radius: $border-radius;
+  transition: $transition-all;
+
+  .icon {
+    svg {
+      stroke: $grey;
+    }
+  }
+
+  .value {
+    color: $grey;
+  }
+
+  &:hover {
+    background: darken($btn-color, 5%);
+    transition: $transition-all;
+  }
+}
+
+
+// $color--button-primary_hover--dark: darken($color--primary, 5%);
+// $color--button-primary_hover--light: lighten($color--primary, 5%);

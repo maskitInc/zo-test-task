@@ -15,3 +15,21 @@
     margin-#{$side}: $size;
   }
 }
+
+
+@mixin create-fake-border($border_style, $border_radius) {
+  border-radius: $border_radius;
+  position: relative;
+
+  &:before {
+    @extend %stretch-full;
+
+    content: '';
+    position: absolute;
+    margin: auto;
+    user-select: none;
+    pointer-events: none;
+    border: $border_style;      
+    border-radius: $border_radius;
+  }
+}

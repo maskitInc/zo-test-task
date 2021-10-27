@@ -1,0 +1,44 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+.h1 {
+  @extend %text-style_S1;
+}
+
+h2,
+.h2 {
+  @extend %text-style_S2;
+}
+
+h3,
+.h3 {
+  @extend %text-style_S3;
+}
+
+h4,
+.h4 {
+  @extend %text-style_S4;
+}
+
+h5,
+.h5 {
+  @extend %text-style_S5;
+}
+
+h6,
+.h6 {
+  @extend %text-style_S6;
+}
+
+p,
+.p {
+  @extend %text-style_Body; 
+}
