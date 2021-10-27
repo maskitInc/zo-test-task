@@ -2,52 +2,62 @@
 
 %text-style {
   &_S1 {
+    font-family: $f-dense;
     font-weight: $f-weight_semi;
     font-size: $f-size_xxxxl;
     line-height: $f-line-height_xxxxl;
   }
 
   &_S2 {
+    font-family: $f-dense;
     font-weight: $f-weight_semi;
     font-size: $f-size_xxxl;
   }
 
   &_S3 {
+    font-family: $f-dense;
     font-weight: $f-weight_semi;
     font-size: $f-size_xxl;
   }
 
   &_S4 {
+    font-family: $f-dense;
     font-weight: $f-weight_semi;
     font-size: $f-size_xl;
   }
 
   &_S5 {
+    font-family: $f-dense;
     font-weight: $f-weight_medium;
     font-size: $f-size_m;
   }
 
   &_S6 {
+    font-family: $f-dense;
     font-weight: $f-weight_semi;
     font-size: $f-size_s;
   }
 
   &_Caption {
+    font-family: $f-regular;
     font-weight: $f-weight_normal;
     font-size: $f-size_s;
   }
 
   &_Button {
+    font-family: $f-dense;
     font-weight: $f-weight_bold;
     font-size: $f-size_m;
   }
 
   &_Lead {
+    font-family: $f-regular;
     font-weight: $f-weight_normal;
     font-size: $f-size_l;
   }
 
   &_Body {
+    font-family: $f-regular;
     font-weight: $f-weight_normal;
     font-size: $f-size_m;
   }

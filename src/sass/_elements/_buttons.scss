@@ -1,0 +1,70 @@
+.btn {
+  $btn: &;
+  $btn-min-size: $icon-size_l;
+
+  @import "_buttons/_styles";
+  @import "_buttons/_sizes";
+
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+
+  .content {
+    display: flex;
+    align-items: center;
+    min-height: $btn-min-size;
+    min-width: $btn-min-size;
+  }
+
+  .value {
+    @extend %text-style_Button;
+  }
+
+  .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      font-size: 24px;
+      stroke-width: 4px;
+    }
+
+    &.--fill-transparent {
+      svg {
+        fill: transparent;
+      }
+    }
+  }
+
+  &.--with-icon {
+    &.--only {
+      .content {
+        justify-content: center;
+      }
+    }
+
+    &.--right {
+      .icon {
+        order: 1;
+      }
+    }
+  }
+
+  &.--inline {
+    display: inline-flex;
+    width: auto;
+  }
+
+  &.--w-100 {
+    width: 100%;
+  }
+}

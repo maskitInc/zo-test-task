@@ -1,6 +1,6 @@
 .subheader {
   @include row-flex;
-  border-bottom: 1px solid $border-light-grey;
+  border-bottom: $border-grey-lightest;
   padding: $indent_m 0;
 
   .col {
@@ -14,7 +14,7 @@
   ul.contacts {
     li {
       @include indent-not-last-child('right', $indent_xxxl);
-      
+
       a {
 
       }
