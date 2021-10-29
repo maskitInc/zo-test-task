@@ -1,0 +1,17 @@
+.header-content {
+  @import "_actions";
+  
+  @include row-flex;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $icon-size--wide_xl 0;
+
+  .--search-form {
+    width: 100%;
+    @media #{$tablet-avg-and-up} {
+      max-width: 500px;
+    }
+  }
+}

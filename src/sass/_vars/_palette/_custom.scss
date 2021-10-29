@@ -3,6 +3,7 @@ $white: $C1-J;
 
 $grey: $C1-A;
 $grey-bright: $C1-F;
+$grey-brightest: $C1-H;
 $grey-light: $C1-D;
 $grey-lightest: $C1-C;
 $grey-almost-white: $C1-K;
@@ -15,3 +16,5 @@ $primary-light: $C2-C;
 $text-base: $grey;
 $text-additional: $grey-lightest;
 $text-link: $primary;
+
+$input-placeholder: $grey-lightest;

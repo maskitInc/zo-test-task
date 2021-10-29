@@ -1,0 +1,77 @@
+&.--bright {
+  @include create-fake-border($border-grey-light, $border-radius);
+
+  border-radius: $border-radius;
+  background-color: $grey-brightest;
+
+  input {
+    border-radius: $border-radius;
+    background-color: $grey-brightest;
+    border: none;
+    box-shadow: none;
+    transition: box-shadow $transition-time-ease;
+
+    &:focus {
+      box-shadow: $shadow--small;
+      transition: box-shadow $transition-time-ease;
+    }
+  }
+}
+
+&.--border-light {
+  input {
+    border: $border-grey-light;
+    border-radius: $border-radius;
+    box-shadow: none;
+    transition: box-shadow $transition-time-ease;
+
+    &:focus {
+      box-shadow: $shadow--small;
+      transition: box-shadow $transition-time-ease;
+    }
+  }
+}
+
+&.--simple {
+  input {
+    border-radius: $border-radius;
+    background-color: $grey-brightest;
+    border: none;
+    box-shadow: none;
+    transition: box-shadow $transition-time-ease;
+
+    &:focus {
+      box-shadow: $shadow--small;
+      transition: box-shadow $transition-time-ease;
+    }
+  }
+
+  .icon {
+    border-radius: $border-radius;
+    background-color: $grey-brightest;
+  }
+}
+
+&.--state {
+  &_active {
+    input {
+      box-shadow: $shadow--small;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+
+  &_disabled {
+    input {
+      background: #eee;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+}

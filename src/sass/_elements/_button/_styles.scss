@@ -2,7 +2,6 @@
   $btn-color: $white;
 
   background-color: $btn-color;
-  border-radius: $border-radius;
   transition: $transition-all;
 
   .icon {
@@ -53,20 +52,7 @@
 
   .icon {
     svg {
-
       stroke: $white;
-      color: #A4DFD1;
-      use {
-        all: inherit;
-        // fill:red;
-        stroke: $white;
-        color: #A4DFD1;
-
-        #ic-chevron-left {
-         stroke: $white;
-        }
-     }
-
     }
   }
 
@@ -84,7 +70,6 @@
   $btn-color: $grey-bright;
 
   background-color: $btn-color;
-  border-radius: $border-radius;
   transition: $transition-all;
 
   .icon {
@@ -99,6 +84,28 @@
 
   &:hover {
     background: darken($btn-color, 5%);
+    transition: $transition-all;
+  }
+}
+
+&.--brightest {
+  $btn-color: $grey-brightest;
+
+  background-color: $btn-color;
+  transition: $transition-all;
+
+  .icon {
+    svg {
+      stroke: $grey;
+    }
+  }
+
+  .value {
+    color: $grey;
+  }
+
+  &:hover {
+    background: darken($btn-color, 2%);
     transition: $transition-all;
   }
 }

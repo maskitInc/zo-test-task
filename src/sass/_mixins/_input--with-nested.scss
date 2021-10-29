@@ -1,0 +1,101 @@
+@mixin nested-element--size($view) {
+  $btn-size_mobile: $button-size_xs;
+  $btn-size_tablet: $button-size_s;
+  $btn-size_desktop: $button-size_m;
+
+  @if $view == "mobile" {
+    width: $btn-size_mobile;
+    height: $btn-size_mobile;
+  } @else if $view == "tablet" {
+    width: $btn-size_tablet;
+    height: $btn-size_tablet;
+  } @else if $view == "desktop" {
+    width: $btn-size_desktop;
+    height: $btn-size_desktop;
+  }
+}
+
+@mixin input-nested-element--size--responsive($element_class) {
+  .#{$element_class} {
+    @include nested-element--size("mobile");
+
+    @media #{$tablet-avg-and-up} {
+      @include nested-element--size("tablet");
+    }
+
+    @media #{$desktop-avg-and-up} {
+      @include nested-element--size("desktop");
+    }
+  }
+}
+
+@mixin input-side--padding($view, $side) {
+  $el-size_mobile: $button-size_xs;
+  $el-size_tablet: $button-size_s;
+  $el-size_desktop: $button-size_m;
+
+  $el-offset_mobile: $indent_xxxs;
+  $el-offset_tablet: $indent_xxs;
+  $el-offset_desktop: $indent_xxs;
+
+  @if $view == "mobile" {
+    $input-side-padding_mobile: $el-size_mobile + $el-offset_mobile;
+    padding-#{$side}: $input-side-padding_mobile;
+  } @else if $view == "tablet" {
+    $input-side-padding_tablet: $el-size_tablet + $el-offset_tablet;
+    padding-#{$side}: $input-side-padding_tablet;
+  } @else if $view == "desktop" {
+    $input-side-padding_desktop: $el-size_desktop + $el-offset_desktop;
+    padding-#{$side}: $input-side-padding_desktop;
+  }
+}
+
+@mixin input-side--padding--responsive($side) {
+  @include input-side--padding("mobile", $side);
+
+  @media #{$tablet-avg-and-up} {
+    @include input-side--padding("tablet", $side);
+  }
+
+  @media #{$desktop-avg-and-up} {
+    @include input-side--padding("desktop", $side);
+  }
+}
+
+@mixin input-nested-element--offset--responsive($element_class, $side) {
+  input {
+    @include input-side--padding--responsive($side);
+  }
+
+  @include input-nested-element--size--responsive($element_class);
+
+  .#{$element_class} {
+    $el-offset_mobile: $indent_xxxs;
+    $el-offset_tablet: $indent_xxs;
+
+    #{$side}: $el-offset_mobile;
+
+    @media #{$tablet-avg-and-up} {
+      #{$side}: $el-offset_tablet;
+    }
+  }
+}
+
+@mixin input-nested-element--offset--non-responsive($view, $element_class, $side) {
+  input {
+    @include input-side--padding($view, $side);
+  }
+
+  .#{$element_class} {
+    @include nested-element--size($view);
+
+    $el-offset_mobile: $indent_xxxs;
+    $el-offset_tablet: $indent_xxs;
+
+    @if $view == "mobile" {
+      #{$side}: $el-offset_mobile;
+    } @else {
+      #{$side}: $el-offset_tablet;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.input {
+  @import "_input/_sizes";
+  @import "_input/_styles";
+
+  display: flex;
+  align-items: flex-start;
+
+  label {
+    @extend %text-style_S6;
+
+    width: 100%;
+    margin-bottom: $indent_xxxs;
+    text-align: left;
+  }
+
+  input {
+    @extend %text-style_Body;
+
+    position: relative;
+    width: 100%;
+    line-height: 24px;
+
+    &::placeholder {
+      color: $input-placeholder;
+    }
+  }
+
+  &.--with-button {
+    position: relative;
+
+    .btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: $border-radius_medium;
+    }
+  }
+
+  &.--with-icon {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      svg {
+        stroke: $grey;
+        stroke-width: 3px;
+      }
+    }
+  }
+}

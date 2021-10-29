@@ -1,0 +1,29 @@
+@mixin create-fake-border($border_style, $border_radius) {
+  border-radius: $border_radius;
+  position: relative;
+
+  &:before {
+    @extend %absolute-align-center;
+
+    content: "";
+    user-select: none;
+    pointer-events: none;
+    border: $border_style;
+    border-radius: $border_radius;
+    z-index: 1;
+  }
+}
+
+// E.g. Separator between dropdown and search field |
+@mixin separator($height, $color) {
+  position: relative;
+
+  &::after {
+    @extend %absolute-align-right;
+
+    content: "";
+    width: 1px;
+    height: $height;
+    background: $color;
+  }
+}
