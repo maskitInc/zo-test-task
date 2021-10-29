@@ -1,0 +1,16 @@
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    // TODO: fix by placeholder or smth
+    width: 1em;
+    height: 1em;
+    font-size: 24px;
+    stroke-width: 4px;
+    fill: transparent;
+    stroke: $grey;
+  }
+}

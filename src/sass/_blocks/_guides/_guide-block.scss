@@ -1,6 +1,16 @@
 .guide-block {
   @include indent-not-last-child('bottom', $indent_xl);
 
+  @media #{$tablet-avg-and-up} {
+    @include indent-not-last-child('bottom', $indent_xl);
+    
+  }
+
+  @media #{$desktop-avg-and-up} {
+    @include indent-not-last-child('bottom', 0);
+    
+  }
+
   .guide-block--i {
     @include indent-not-last-child('bottom', $indent_s);
 

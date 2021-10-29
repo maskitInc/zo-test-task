@@ -10,6 +10,16 @@
   }
 
   &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_m;
+
+        @media #{$tablet-avg-and-up} {
+          font-size: $icon-size_l;
+        }
+      }
+    }
+
     &.--only {
       padding: $indent_xs;
 
@@ -19,10 +29,6 @@
 
       @media #{$desktop-avg-and-up} {
         padding: $indent_m;
-      }
-
-      .icon {
-        width: $icon-size_l;
       }
     }
 
@@ -80,6 +86,12 @@
   padding: $indent_xs $indent_m;
 
   &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_m;
+      }
+    }
+
     &.--only {
       padding: $indent_xs;
     }
@@ -106,6 +118,12 @@
   padding: $indent_s $indent_xl;
 
   &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_l;
+      }
+    }
+
     &.--only {
       padding: $indent_s;
     }
@@ -132,6 +150,12 @@
   padding: $indent_m $indent_xxxxl;
 
   &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_l;
+      }
+    }
+    
     &.--only {
       padding: $indent_m;
 

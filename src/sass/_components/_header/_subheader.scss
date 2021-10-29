@@ -2,16 +2,12 @@
   @include row-flex;
   border-bottom: $border-grey-lightest;
   padding: $indent_m 0;
-
-  .col {
-    @include col;
-    @include size(6);
-    @include size-bp_768(6);
-
-    display: flex;
-  }
+  display: flex;
+  justify-content: space-between;
 
   ul.contacts {
+    display: flex;
+    
     li {
       @include indent-not-last-child('right', $indent_xxxl);
 
@@ -22,6 +18,7 @@
   }
 
   nav.links {
+    display: flex;
     justify-content: flex-end;
 
     a {

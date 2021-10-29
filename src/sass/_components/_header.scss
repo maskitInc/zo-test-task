@@ -1,9 +1,12 @@
 .header {
   @import "_header/_subheader";
-  @import "_header/_search-form";
-  @import "_header/_actions";
+  @import "_header/_header-content";
 
   @include wrapper();
 
   position: relative;  
+
+  .row {
+    @include row-flex;
+  }
 }

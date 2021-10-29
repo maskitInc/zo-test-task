@@ -2,8 +2,8 @@
   $btn: &;
   $btn-min-size: $icon-size_l;
 
-  @import "_buttons/_styles";
-  @import "_buttons/_sizes";
+  @import "_button/_styles";
+  @import "_button/_sizes";
 
   position: relative;
   display: flex;
@@ -13,6 +13,8 @@
   cursor: pointer;
   user-select: none;
   line-height: 1;
+  border-radius: $border-radius;
+  margin: 0;
 
   .content {
     display: flex;
@@ -23,26 +25,6 @@
 
   .value {
     @extend %text-style_Button;
-  }
-
-  .icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 1em;
-      height: 1em;
-      font-size: 24px;
-      stroke-width: 4px;
-    }
-
-    &.--fill-transparent {
-      svg {
-        fill: transparent;
-      }
-    }
   }
 
   &.--with-icon {
@@ -62,9 +44,5 @@
   &.--inline {
     display: inline-flex;
     width: auto;
-  }
-
-  &.--w-100 {
-    width: 100%;
   }
 }

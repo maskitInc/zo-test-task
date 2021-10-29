@@ -1,0 +1,117 @@
+&.--responsive {
+  input {
+    padding: $indent_xs $indent_m;
+
+    @media #{$tablet-avg-and-up} {
+      padding: $indent_s $indent_l;
+    }
+
+    @media #{$desktop-avg-and-up} {
+      padding: $indent_m $indent_xl;
+    }
+  }
+
+  &.--with-button {
+    @include input-nested-element--offset--responsive("btn", "right");
+    
+    .icon {
+      svg {
+        font-size: $icon-size_m;
+
+        @media #{$tablet-avg-and-up} {
+          font-size: $icon-size_l;
+        }
+
+      }
+    }
+  }
+
+  &.--with-icon {
+    @include input-nested-element--offset--responsive("icon", "right");
+
+    .icon {
+      svg {
+        stroke-width: 3px;
+
+        font-size: $icon-size_s;
+
+        @media #{$tablet-avg-and-up} {
+          font-size: $icon-size_m;
+        }
+
+        @media #{$desktop-avg-and-up} {
+          font-size: $icon-size_l;
+        }
+      }
+    }
+  }
+}
+
+&.--s {
+  input {
+    padding: $indent_xs $indent_m;
+  }
+
+  &.--with-button,
+  &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_s;
+      }
+    }
+  }
+
+  &.--with-button {
+    @include input-nested-element--offset--non-responsive("mobile", "btn", "right");
+  }
+
+  &.--with-icon {
+    @include input-nested-element--offset--non-responsive("mobile", "icon", "right");
+  }
+}
+
+&.--m {
+  input {
+    padding: $indent_s $indent_l;
+  }
+
+  &.--with-button,
+  &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_m;
+      }
+    }
+  }
+
+  &.--with-button {
+    @include input-nested-element--offset--non-responsive("tablet", "btn", "right");
+  }
+
+  &.--with-icon {
+    @include input-nested-element--offset--non-responsive("tablet", "icon", "right");
+  }
+}
+
+&.--l {
+  input {
+    padding: $indent_m $indent_xl;
+  }
+
+  &.--with-button,
+  &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_l;
+      }
+    }
+  }
+
+  &.--with-button {
+    @include input-nested-element--offset--non-responsive("desktop", "btn", "right");
+  }
+
+  &.--with-icon {
+    @include input-nested-element--offset--non-responsive("desktop", "icon", "right");
+  }
+}
