@@ -1,3 +1,17 @@
 .form {
   @import "_form/_field";
+
+  .form-fieldset {
+    @include indent-not-last-child('bottom', $indent_xxxxxl);
+  }
+
+  .form-field {
+    @include indent-not-last-child('bottom', $indent_xl);
+
+    label {
+      @extend %text-style_S6;
+      display: block;
+      margin-bottom: $indent_xxs;
+    }
+  }
 }
