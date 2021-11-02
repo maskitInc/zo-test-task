@@ -201,7 +201,7 @@ function svg() {
         run: function ($, file) {
           // $("[stroke]").removeAttr("stroke");
           $("path").removeAttr("stroke stroke-width");
-          $("path").attr({ "stroke": "inherit", "stroke-width": "inherit" });
+          $("path").attr({ stroke: "inherit", "stroke-width": "inherit" });
         },
         parserOptions: { xmlMode: true },
       })

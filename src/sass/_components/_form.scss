@@ -1,17 +1,70 @@
-.form {
-  @import "_form/_field";
+@import "_form/_field";
 
-  .form-fieldset {
-    @include indent-not-last-child('bottom', $indent_xxxxxl);
+.form-fieldset {
+  @include indent-not-last-child("bottom", $indent_xxxxxl);
+}
+
+.form-field {
+  label {
+    @extend %text-style_S6;
+    display: block;
+    margin-bottom: $indent_xxs;
+  }
+}
+
+.form-element {
+  [type="number"] {
+    text-align: right;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.form {
+  .form-fieldset-list {
+    $list-gap: $indent_xl;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent_s;
+
+    @media #{$laptop-avg-and-up} {
+      gap: $list-gap;
+    }
+
+    .form-field {
+      width: 100%;
+
+      @media #{$laptop-avg-and-up} {
+        width: calc(50% - #{$list-gap / 2});
+      }
+    }
   }
 
-  .form-field {
-    @include indent-not-last-child('bottom', $indent_xl);
+  .title {
+    margin-bottom: $indent_xxxl;
 
-    label {
-      @extend %text-style_S6;
-      display: block;
-      margin-bottom: $indent_xxs;
+    legend {
+      @extend %text-style_S3;
+      text-indent: -2px; // Reduces extra indentation on the left
+
+      & + .description {
+        margin-top: $indent_xxs;
+      }
+    }
+
+    .description {
+      @extend %text-style_Caption;
+      color: $text-additional;
+
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

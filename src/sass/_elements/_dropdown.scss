@@ -1,9 +1,14 @@
 .dropdown {
+  @import "_dropdown/_styles";
+
   .dropdown-toggle {
-    
   }
 
   .dropdown-menu {
-    display: none;
+    user-select: none;
+
+    li {
+      @extend %text-style_S5;
+    }
   }
 }

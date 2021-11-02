@@ -1,17 +1,55 @@
 .header-content {
   @import "_actions";
-  
-  @include row-flex;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: $icon-size--wide_xl 0;
+  padding-top: $indent_s;
 
-  .--search-form {
+  @media #{$tablet-avg-and-up} {
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: $indent_xl 0;
+  }
+
+  @media #{$desktop-avg-and-up} {
+    flex-wrap: nowrap;
+    padding: $indent_xxxl 0;
+  }
+
+  .logo {
+    display: flex;
+    order: 0;
+    flex-shrink: 0;
+  }
+
+  .form {
+    display: flex;
     width: 100%;
+    margin-top: $indent_s;
+    order: 2;
+    flex-basis: auto;
+
     @media #{$tablet-avg-and-up} {
-      max-width: 500px;
+      margin-top: 0;
+      flex-basis: 500px;
+      order: 1;
+    }
+
+    .field {
+      width: 100%;
+
+      .dropdown + .form-element {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .actions {
+    order: 1;
+    @media #{$tablet-avg-and-up} {
+      order: 2;
     }
   }
 }

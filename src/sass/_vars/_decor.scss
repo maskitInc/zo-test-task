@@ -1,3 +1,8 @@
+// Z-index
+
+$z-index_dropdown: 10;
+$z-index_modal: 100;
+
 // Transitions
 $transition-time-ease: .3s ease;
 $transition-all: all $transition-time-ease;
@@ -22,13 +27,17 @@ $border-primary-light: $border-size_thick solid $primary-light;
 
 
 // Shadows
-$shadow-color--dark: fade-out($black, 0.8);
+$shadow-color--dark: fade-out($black, 0.85);
 
 $shadow-size--small: 0 6px 12px -3px;
-$shadow-size--big: 0 12px 24px 0;
+$shadow-size_big: 0 12px 24px 0;
+$shadow-size: 0 2px 4px 0;
 
 $shadow--small: $shadow-size--small $shadow-color--dark;
-$shadow--big: $shadow-size--big $shadow-color--dark;
+$shadow--big: $shadow-size_big $shadow-color--dark;
+
+$shadow_big: $shadow-size_big $shadow-color--dark;
+$shadow_small: $shadow-size $shadow-color--dark;
 
 
 

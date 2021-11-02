@@ -24,11 +24,11 @@
         </li>
         <li>
           <h4>Input with <b class="marked-text">button</b> tag</h4>
-          <partial src="elements/inputs/input--with-button--button.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" styles-btn="--brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-button--button.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" styles-btn="--responsive --brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
         </li>
         <li>
           <h4>Input with <b class="marked-text">div</b> tag</h4>
-          <partial src="elements/inputs/input--with-button--div.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" styles-btn="--brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-button--div.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" styles-btn="--responsive --brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
         </li>
       </ul>
     </div>
@@ -113,4 +113,33 @@
       </ul>
     </div>
   </div>
+
+  <div class="guide-block col --col-4">
+    <div class="guide-block--i">
+      <h4>With dropdown:</h4>
+      <ul class="list --simple">
+        <li>Position: --ltr by default and --rtl if you don't want (can't) change the html structure </li>
+        <li>Style</li>
+      </ul>
+    </div>
+
+    <div class="guide-block--i">
+      <h5>Examples</h5>
+      <ul class="list --inline">
+        <li>
+          <h4>Component <b class="marked-text">Input with dropdown - left</b></h4>
+          <partial src="elements/inputs/input--with-dropdown.html" type-input="text" styles-fieldset="--ltr --mobile-col" size-input="--m" style-input="" id-input="siteSearch" styles-btn="--m --brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
+        </li>
+        <li>
+          <h4>Component <b class="marked-text">Input with dropdown - right</b></h4>
+          <partial src="elements/inputs/input--only--with-dropdown.html" type-input="number" styles-fieldset="--flex-inline --rtl --mobile-row" min-range="1" max-range="50" type="number" size-input="--m" style-input="" id-input="siteSearch" placeholder-input="1pcs"></partial>
+        </li>
+        <li>
+          <h4>Component <b class="marked-text">Search with dropdown</b></h4>
+          <partial src="components/search-with-dropdown.html" styles-input="--responsive --simple" value-btn="Simple"></partial>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </div>

@@ -9,8 +9,46 @@
     width: 1em;
     height: 1em;
     font-size: 24px;
-    stroke-width: 4px;
+    stroke-width: 3px;
     fill: transparent;
     stroke: $grey;
+  }
+
+  &.--with-counter {
+    .counter {
+      @extend %text-style_S5;
+      font-size: $f-size_s;
+      font-style: normal;
+      text-align: right;
+
+      padding: $indent_xxxs $indent_xxs;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY($indent_xxs) translateX(-$indent_xs);
+
+      background: $counter-bg-cart;
+      color: $white;
+      border-radius: $icon-size_s;
+      box-shadow: $shadow_small;
+    }
+  }
+
+  &.--flip-horizontal {
+    svg {
+      transform: rotateX(-180deg);
+    }
+  }
+
+  &.--primary {
+    svg {
+      stroke: $primary;
+    }
+  }
+
+  &.--white {
+    svg {
+      stroke: $white;
+    }
   }
 }

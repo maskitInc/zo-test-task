@@ -40,5 +40,14 @@ h6,
 
 p,
 .p {
-  @extend %text-style_Body; 
+  @extend %text-style_Body;
+}
+
+// prefix c- means "color"
+.c--base {
+  color: $text-base;
+}
+
+.c--primary {
+  color: $primary;
 }

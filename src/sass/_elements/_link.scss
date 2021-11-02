@@ -1,0 +1,24 @@
+.link {
+  display: inline-flex;
+
+  &.--with-icon {
+    .icon {
+      @media #{$tablet-avg-and-up} {
+        display: none;
+        margin-right: $indent_xs;
+      }
+
+      svg {
+        stroke-width: 3px;
+      }
+    }
+
+    .link-content {
+      display: none;
+      
+      @media #{$tablet-avg-and-up} {
+        display: inline;
+      }
+    }
+  }
+}

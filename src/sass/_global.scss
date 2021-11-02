@@ -5,11 +5,12 @@
 @import "libs";
 @import "placeholders";
 @import "mixins";
+@import "helpers";
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
@@ -17,29 +18,32 @@
 }
 
 ::placeholder {
-    color: #000;
+  color: #000;
 }
 
+/*
 ::selection {  
 	background-color: $primary;
 	color: $white;
 }
+*/
 
 .marked-text {
-	background-color: lighten($primary, 50%);
+  background-color: lighten($primary, 50%);
 }
 
-html, body{
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
-	
+
 body {
   @extend %text-style_Body;
 
-	min-width: 320px;
-	position: relative;
-	overflow-x: hidden;
-	font-family: $f-regular;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  font-family: $f-regular;
 }
 
 .wrapper {
@@ -50,12 +54,33 @@ body {
   @include wrapper-full;
 }
 
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+
+  padding: 0 $indent_m;
+
+  @media #{$mobile-avg-and-up} {
+    padding: 0 $indent_xl;
+  }
+
+  @media #{$laptop-avg-and-up} {
+    padding: 0 $indent_xxxl;
+  }
+
+  @media #{$desktop-avg-and-up} {
+    padding: 0 $indent_xxxxl;
+  }
+}
+
 a {
   text-decoration: none;
   color: $text-link;
 }
 
-button, input {
+button,
+input {
   &:focus {
     outline: none;
   }
@@ -89,12 +114,4 @@ input {
 
 strong {
   font-family: $f-dense;
-}
-
-.hidden {
-  display: none;
-}
-
-.--w-100 {
-  width: 100%;
 }

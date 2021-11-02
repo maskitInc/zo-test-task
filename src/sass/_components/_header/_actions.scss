@@ -1,16 +1,17 @@
 .actions {
   display: flex;
-  
-  .profile,
-  .cart {
 
-  }
+  .btn {
+    @include indent-not-last-child("right", $indent_xl);
 
-  .profile {
+    &.--profile,
+    &.--cart {
+      padding-left: 0;
+      padding-right: 0;
 
-  }
-
-  .cart {
-
+      &:hover {
+        background: transparent;
+      }
+    }
   }
 }

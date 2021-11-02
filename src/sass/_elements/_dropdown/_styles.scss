@@ -1,0 +1,119 @@
+&.--simple {
+  .dropdown-menu {
+    $offset: 4px;
+    left: $offset;
+    width: calc(100% - #{$offset * 2});
+
+    position: absolute;
+    top: -99999999999px;
+    z-index: $z-index_dropdown;
+    padding: $indent_xxs;
+    border-radius: $border-radius;
+    background: $white;
+    box-shadow: $shadow_small;
+    user-select: none;
+    overflow: hidden;
+    opacity: 0;
+    // Fade out transition
+    // transition: top 0s linear 0.3s, opacity 0.2s ease 0.15s;
+
+    @media #{$mobile-avg-and-up} {
+      width: 200px;
+    }
+
+    li {
+      @extend %text-style_S5;
+      @include indent-not-last-child("bottom", $indent_xxs);
+
+      cursor: pointer;
+      padding: $indent_xs $indent_s;
+      border-radius: $border-radius_small;
+
+      transition: $transition-all;
+
+      &.--active {
+        background: $primary;
+        color: $white;
+        transition: $transition-all;
+      }
+
+      &:hover:not(.--active) {
+        background: $grey-bright;
+        transition: $transition-all;
+      }
+    }
+
+    &.--showed {
+      top: 4px;
+      opacity: 1;
+      // Fade in transition
+      transition: top 0s linear 0s, opacity 0.2s ease 0.05s;
+    }
+  }
+}
+
+&.--mobile-collapse {
+  .dropdown-menu {
+    overflow: hidden;
+
+    @media #{$tablet-below-avg} {
+      opacity: 0;
+      height: 0;
+
+    }
+
+    @media #{$tablet-avg-and-up} {
+    
+      $offset: 4px;
+      left: $offset;
+      width: 200px;
+  
+      position: absolute;
+      top: -99999999999px;
+      z-index: $z-index_dropdown;
+      padding: $indent_xxs;
+      border-radius: $border-radius;
+      background: $white;
+      box-shadow: $shadow--small;
+      opacity: 0;
+      // Fade out transition
+      // transition: top 0s linear 0.3s, opacity 0.2s ease 0.15s;
+    }
+
+    li {
+      @extend %text-style_S5;
+      @include indent-not-last-child("bottom", $indent_xxs);
+
+      cursor: pointer;
+      padding: $indent_xs $indent_s;
+      border-radius: $border-radius_small;
+
+      transition: $transition-all;
+
+      &.--active {
+        background: $primary;
+        color: $white;
+        transition: $transition-all;
+      }
+
+      &:hover:not(.--active) {
+        background: $grey-bright;
+        transition: $transition-all;
+      }
+    }
+
+    &.--showed {
+      @media #{$tablet-below-avg} {
+        opacity: 1;
+        height: auto;
+  
+      }
+      @media #{$tablet-avg-and-up} {
+        top: 4px;
+        opacity: 1;
+        // Fade in transition
+        transition: top 0s linear 0s, opacity 0.2s ease 0.05s;
+      }
+    }
+  }
+}

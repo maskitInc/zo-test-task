@@ -1,0 +1,123 @@
+.huge-menu {
+  position: relative;
+
+  @media #{$tablet-avg-and-up} {
+    background: #f9f9f9;
+  }
+
+  .huge-menu--action {
+    @media #{$tablet-avg-and-up} {
+      display: none;
+    }
+  }
+
+  .huge-menu--list {
+    @media #{$tablet-below-avg} {
+      display: none;
+    }
+
+    @media #{$tablet-avg-and-up} {
+      display: flex;
+    }
+
+    &.--showed {
+      display: flex;
+
+      @media #{$tablet-below-avg} {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: $indent_m;
+        background: darken($primary, 5%);
+        z-index: $z-index_modal;
+
+        .huge-menu--container {
+          border-radius: $border-radius;
+          overflow: hidden;
+          flex-direction: column;
+          background: $white;
+          box-shadow: $shadow_big;
+
+          .--hugeMenuClose {
+            display: flex;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            &:before {
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+          }
+        }
+
+        .huge-menu--content {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          width: 100%;
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+          overflow-x: hidden;
+          overflow-y: auto;
+          border-bottom: 1px solid $grey-light;
+
+          .btn.--with-icon {
+            border-radius: 0;
+            background: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .huge-menu--container {
+    display: flex;
+    width: 100%;
+  }
+
+  .huge-menu--content {
+    display: flex;
+
+    @media #{$tablet-avg-and-up} {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .--hugeMenuClose {
+    display: none;
+  }
+
+  .dropdown {
+    position: relative;
+
+    @media #{$tablet-avg-and-up} {
+      @include indent-not-last-child("right", $indent_s);
+    }
+
+    .btn.--with-icon {
+      padding-left: 0;
+      padding-right: 0;
+
+      .icon {
+        margin-left: $indent_xxxs;
+
+        svg {
+          font-size: 16px;
+        }
+      }
+
+      .value {
+        font-weight: $f-weight_medium;
+      }
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}

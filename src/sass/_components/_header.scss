@@ -2,11 +2,39 @@
   @import "_header/_subheader";
   @import "_header/_header-content";
 
-  @include wrapper();
-
   position: relative;  
 
   .row {
-    @include row-flex;
+    // @include row-flex;
+
+    .col {
+      @include col;
+      
+      display: flex;
+      flex-direction: column;
+  
+      &.--col-12 {
+        @include size(12);
+      }
+  
+      &.--col-8 {
+        @include size(8);
+      }
+  
+      &.--col-4 {
+        @include size(4);
+        @include size-bp_1280(6);
+        @include size-bp_768(12);
+      }
+    }
+  }
+
+  .huge-menu {
+    margin-top: $indent_m;
+
+    @media #{$tablet-avg-and-up} {
+      margin-top: 0;
+
+    }
   }
 }
