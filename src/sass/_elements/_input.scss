@@ -13,6 +13,7 @@
     text-align: left;
   }
 
+  textarea,
   input {
     @extend %text-style_Body;
 
@@ -25,15 +26,35 @@
     }
   }
 
+  textarea {
+    resize: none;
+  }
+
+  &.--checkbox {
+    label {
+      @extend %text-style_Body;
+    }
+  }
+
   &.--with-button {
+    $button-offset: $indent_xxs;
+
     position: relative;
 
+    &.--rtl {
+      padding-right: $button-offset;
+    }
+
+    &.--ltr {
+      padding-left: $button-offset;
+    }
+
     .btn {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
       border-radius: $border-radius_medium;
+
+      .value {
+        white-space: nowrap;
+      }
     }
   }
 

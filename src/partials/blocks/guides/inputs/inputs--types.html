@@ -5,37 +5,6 @@
 
   <div class="guide-block col --col-4">
     <div class="guide-block--i">
-      <h4>Search:</h4>
-      <ul class="list --simple">
-        <li>Add size and style classes and Voilà</li>
-      </ul>
-    </div>
-
-    <div class="guide-block--i">
-      <h5>Examples</h5>
-      <ul class="list --inline">
-        <li>
-          <h4>Component <b class="marked-text">Search with dropdown</b></h4>
-          <partial src="components/search-with-dropdown.html" styles-input="--responsive --simple" value-btn="Simple"></partial>
-        </li>
-        <li>
-          <h4>Regular input</h4>
-          <partial src="elements/inputs/input--only.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" placeholder-input="Search Products, categories ..."></partial>
-        </li>
-        <li>
-          <h4>Input with <b class="marked-text">button</b> tag</h4>
-          <partial src="elements/inputs/input--with-button--button.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" styles-btn="--responsive --brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
-        </li>
-        <li>
-          <h4>Input with <b class="marked-text">div</b> tag</h4>
-          <partial src="elements/inputs/input--with-button--div.html" input-type="text" size-input="--responsive" style-input="--simple" id-input="siteSearch" styles-btn="--responsive --brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="guide-block col --col-4">
-    <div class="guide-block--i">
       <h4>With icon:</h4>
       <ul class="list --simple">
         <li>Add <b class="marked-text">--with-icon</b> class to <b>.form-element.input</b></li>
@@ -46,18 +15,18 @@
       <h5>Examples</h5>
       <ul class="list --inline">
         <li>
-          <partial src="elements/inputs/input--with-icon.html" input-type="email" size-input="--s" style-input="--simple" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-icon.html" type-input="email" size-input="--s" style-input="--bright" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
         </li>
 
         <li>
-          <partial src="elements/inputs/input--with-icon.html" input-type="email" size-input="--m" style-input="--simple" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-icon.html" type-input="email" size-input="--m" style-input="--bright" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
         </li>
 
         <li>
-          <partial src="elements/inputs/input--with-icon.html" input-type="email" size-input="--l" style-input="--simple" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-icon.html" type-input="email" size-input="--l" style-input="--bright" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
         </li>
         <li class="--w-100">
-          <partial src="elements/inputs/input--with-icon.html" input-type="email" size-input="--responsive --w-100" style-input="--simple" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-icon.html" type-input="email" size-input="--responsive --w-100" style-input="--bright" id-input="siteSearch" src-icon="img/icons.svg#ic-contact-mail" placeholder-input="Search Products, categories ..."></partial>
         </li>
       </ul>
     </div>
@@ -76,39 +45,24 @@
       <ul class="list --inline">
         <li>
           <h4>Input with <b class="marked-text">button</b> tag</h4>
-          <partial src="elements/inputs/input--with-button--button.html" input-type="text" size-input="--responsive" style-input="--bright" id-input="siteSearch" styles-btn="--brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-button--button.html" type-input="text" size-input="--responsive --rtl" style-input="--bright" id-input="siteSearch" styles-btn="--brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
         </li>
         <li>
           <h4>Input with <b class="marked-text">div</b> tag</h4>
-          <partial src="elements/inputs/input--with-button--div.html" input-type="text" size-input="--responsive" style-input="--bright" id-input="siteSearch" styles-btn="--brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
+          <partial src="elements/inputs/input--with-button--div.html" type-input="text" size-input="--responsive --rtl" style-input="--bright" id-input="siteSearch" styles-btn="--brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Search Products, categories ..."></partial>
         </li>
-      </ul>
-    </div>
-  </div>
+        <li>
+          <h4>Responsive input with <b class="marked-text">text button</b></h4>
+          <partial src="elements/inputs/input--with-button--button-text.html" type-input="text" size-input="--responsive --rtl" style-input="--bright" id-input="siteSearch" styles-btn="--responsive --right --brightest" src-icon="img/icons.svg#ic-actions-search" placeholder-input="Apply promo code" value-btn="Apply now"></partial>
+        </li>
+        <li>
+          <h4>Input '--m' size with <b class="marked-text">text button</b></h4>
+          <partial src="elements/inputs/input--with-button--button-text.html" type-input="text" size-input="--m --rtl" style-input="--bright" id-input="siteSearch" styles-btn="--m --right --brightest" placeholder-input="Apply promo code" value-btn="Apply now"></partial>
+        </li>
 
-  <div class="guide-block col --col-4">
-    <div class="guide-block--i">
-      <h4>Text with Icon:</h4>
-      <ul class="list --simple">
-        <li>Add <b class="marked-text">--with-icon</b> class with one of aligning class <b
-            class="marked-text">--left</b>&nbsp;or <b class="marked-text">--right</b>.</li>
-      </ul>
-    </div>
-
-    <div class="guide-block--i">
-      <h5>Examples</h5>
-      <ul class="list --inline">
         <li>
-          <partial src="elements/buttons/button--text-with-icon.html" input-type="text" styles-btn="--responsive --with-icon --left --simple" value-btn="Simple Left" src-icon="img/icons.svg#ic-chevron-left"></partial>
-        </li>
-        <li>
-          <partial src="elements/buttons/button--text-with-icon.html" input-type="text" styles-btn="--responsive --with-icon --right --stroke" value-btn="Stroke Right" src-icon="img/icons.svg#ic-chevron-right"></partial>
-        </li>
-        <li>
-          <partial src="elements/buttons/button--text-with-icon.html" input-type="text" styles-btn="--responsive --with-icon --left --colored" value-btn="Colored Left" src-icon="img/icons.svg#ic-chevron-left"></partial>
-        </li>
-        <li>
-          <partial src="elements/buttons/button--text-with-icon.html" input-type="text" styles-btn="--responsive --with-icon --right --bright" value-btn="Bright Right" src-icon="img/icons.svg#ic-chevron-right"></partial>
+          <h4>Input with <b class="marked-text">label</b></h4>
+          <partial src="components/forms/fields/field--label-with-input--with-button-text.html" styles-form-field="--w-100" type-input="text" id-label="promoCode" id-input="promoCode" value-label="promoCode" value-input="Apply promo code" value-btn="Apply now" styles-btn="--m --right --brightest"></partial>
         </li>
       </ul>
     </div>

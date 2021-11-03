@@ -1,4 +1,5 @@
 &.--responsive {
+  textarea,
   input {
     padding: $indent_xs $indent_m;
 
@@ -12,16 +13,72 @@
   }
 
   &.--with-button {
-    @include input-nested-element--offset--responsive("btn", "right");
-    
-    .icon {
-      svg {
-        font-size: $icon-size_m;
+    input {
+      padding-right: 0;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .btn {
+      align-self: center;
+      padding: $indent_xxs $indent_xs;
+
+      @media #{$tablet-avg-and-up} {
+        padding: $indent_xs;
+      }
+
+      @media #{$desktop-avg-and-up} {
+        padding: $indent_s;
+      }
+
+      &.--right {
+        padding-left: $indent_xs;
 
         @media #{$tablet-avg-and-up} {
-          font-size: $icon-size_l;
+          padding-left: $indent_s;
         }
 
+        @media #{$desktop-avg-and-up} {
+          padding-left: $indent_m;
+        }
+
+        .icon {
+          margin-left: $indent_xxs;
+
+          @media #{$tablet-avg-and-up} {
+            margin-left: $indent_xs;
+          }
+
+          @media #{$desktop-avg-and-up} {
+            margin-left: $indent_xs;
+          }
+        }
+      }
+
+      &.--left {
+        .icon {
+          margin-right: $indent_xxs;
+
+          @media #{$tablet-avg-and-up} {
+            margin-right: $indent_xs;
+          }
+
+          @media #{$desktop-avg-and-up} {
+            margin-right: $indent_xs;
+          }
+        }
+      }
+
+      .icon {
+        svg {
+          font-size: $icon-size_m;
+
+          @media #{$tablet-avg-and-up} {
+            font-size: $icon-size_l;
+          }
+        }
       }
     }
   }
@@ -48,21 +105,31 @@
 }
 
 &.--s {
+  textarea,
   input {
     padding: $indent_xs $indent_m;
   }
 
+  &.--with-button {
+    input {
+      padding-right: 0;
+    }
+    .btn {
+      padding: $indent_xxs;
+    }
+  }
+
   &.--with-button,
   &.--with-icon {
+    .btn {
+      align-self: center;
+    }
+
     .icon {
       svg {
         font-size: $icon-size_s;
       }
     }
-  }
-
-  &.--with-button {
-    @include input-nested-element--offset--non-responsive("mobile", "btn", "right");
   }
 
   &.--with-icon {
@@ -71,21 +138,32 @@
 }
 
 &.--m {
+  textarea,
   input {
     padding: $indent_s $indent_l;
   }
 
+  &.--with-button {
+    input {
+      padding-right: 0;
+    }
+
+    .btn {
+      padding: $indent_xs;
+    }
+  }
+
   &.--with-button,
   &.--with-icon {
+    .btn {
+      align-self: center;
+    }
+
     .icon {
       svg {
         font-size: $icon-size_m;
       }
     }
-  }
-
-  &.--with-button {
-    @include input-nested-element--offset--non-responsive("tablet", "btn", "right");
   }
 
   &.--with-icon {
@@ -94,21 +172,32 @@
 }
 
 &.--l {
+  textarea,
   input {
     padding: $indent_m $indent_xl;
   }
 
+  &.--with-button {
+    input {
+      padding-right: 0;
+    }
+
+    .btn {
+      padding: $indent_s;
+    }
+  }
+
   &.--with-button,
   &.--with-icon {
+    .btn {
+      align-self: center;
+    }
+
     .icon {
       svg {
         font-size: $icon-size_l;
       }
     }
-  }
-
-  &.--with-button {
-    @include input-nested-element--offset--non-responsive("desktop", "btn", "right");
   }
 
   &.--with-icon {

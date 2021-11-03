@@ -1,0 +1,16 @@
+&.--bright {
+  @include create-fake-border($border-grey-light, $border-radius);
+
+  border-radius: $border-radius;
+  background-color: $grey-brightest;
+}
+
+&.--border-light {
+  border: $border-grey-light;
+  border-radius: $border-radius;
+}
+
+&.--simple {
+  border-radius: $border-radius;
+  background-color: $grey-brightest;
+}

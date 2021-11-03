@@ -1,0 +1,46 @@
+.total {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .total-i {
+    @extend %text-style_S6;
+    @include indent-not-last-child("bottom", $indent_s);
+
+    display: flex;
+
+    .name {
+      flex-grow: 1;
+
+      b {
+      }
+
+      .extra {
+        @extend %text-style_Caption;
+        margin-bottom: $indent_xs;
+        font-weight: $f-weight_medium;
+        color: $primary;
+      }
+    }
+
+    .val {
+      font-weight: $f-weight_medium;
+    }
+
+    &.--total {
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: $indent_xs;
+
+      @media #{$tablet-avg-and-up} {
+        margin-top: 0;
+      }
+
+      .val {
+        @extend %text-style_S2;
+        line-height: 1;
+        color: $primary;
+      }
+    }
+  }
+}

@@ -1,47 +1,4 @@
 .checkout-process {
-  position: relative; 
+  position: relative;
   padding-top: $indent_xxxl;
-
-  .row {
-    // @include row-flex;
-
-    .col {
-      &.--col-8 {
-        
-      }
-
-      &.--col-4 {
-        
-      }
-    }
-
-    .col {
-      display: flex;
-      flex-direction: column;
-  
-      &.--col-12 {
-
-      }
-  
-      &.--col-8 {
-
-      }
-  
-      &.--col-7 {
-
-      }
-
-      &.--col-6 {
-
-      }
-
-      &.--col-5 {
-
-      }
-  
-      &.--col-4 {
-        
-      }
-    }
-  }
 }

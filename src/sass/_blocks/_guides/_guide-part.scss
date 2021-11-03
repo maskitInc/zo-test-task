@@ -9,6 +9,8 @@
   .row {
     @include row-flex;
     @include indent-not-last-child('bottom', $indent_xl);
+
+    gap: $indent_xxxl 0;
   }
 
   .col {

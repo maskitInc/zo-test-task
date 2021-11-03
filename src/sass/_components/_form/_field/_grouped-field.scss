@@ -69,6 +69,11 @@
           padding-left: $indent_l;
         }
       }
+
+      .dropdown-menu {
+        left: auto;
+        right: 4px;
+      }
     }
 
     .form-element {

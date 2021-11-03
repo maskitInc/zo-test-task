@@ -1,0 +1,31 @@
+&.--responsive {
+  label {
+    padding: $indent_xs $indent_m;
+
+    @media #{$tablet-avg-and-up} {
+      padding: $indent_s $indent_l;
+    }
+
+    @media #{$desktop-avg-and-up} {
+      padding: $indent_m $indent_xl;
+    }
+  }
+}
+
+&.--s {
+  label {
+    padding: $indent_xs $indent_s;
+  }
+}
+
+&.--m {
+  label {
+    padding: $indent_s $indent_m;
+  }
+}
+
+&.--l {
+  label {
+    padding: $indent_m $indent_xl;
+  }
+}

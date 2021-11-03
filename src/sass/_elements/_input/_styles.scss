@@ -4,6 +4,7 @@
   border-radius: $border-radius;
   background-color: $grey-brightest;
 
+  textarea,
   input {
     border-radius: $border-radius;
     background-color: $grey-brightest;
@@ -12,13 +13,15 @@
     transition: box-shadow $transition-time-ease;
 
     &:focus {
-      box-shadow: $shadow--small;
-      transition: box-shadow $transition-time-ease;
+      box-shadow: none;
+      // box-shadow: $shadow--small;
+      // transition: box-shadow $transition-time-ease;
     }
   }
 }
 
 &.--border-light {
+  textarea,
   input {
     border: $border-grey-light;
     border-radius: $border-radius;
@@ -26,13 +29,15 @@
     transition: box-shadow $transition-time-ease;
 
     &:focus {
-      box-shadow: $shadow--small;
-      transition: box-shadow $transition-time-ease;
+      box-shadow: none;
+      // box-shadow: $shadow--small;
+      // transition: box-shadow $transition-time-ease;
     }
   }
 }
 
 &.--simple {
+  textarea,
   input {
     border-radius: $border-radius;
     background-color: $grey-brightest;
@@ -41,8 +46,9 @@
     transition: box-shadow $transition-time-ease;
 
     &:focus {
-      box-shadow: $shadow--small;
-      transition: box-shadow $transition-time-ease;
+      box-shadow: none;
+      // box-shadow: $shadow--small;
+      // transition: box-shadow $transition-time-ease;
     }
   }
 

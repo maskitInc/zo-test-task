@@ -1,10 +1,19 @@
 <div class="checkout-process">
   <div class="container">
-    <div class="row">
-      <div class="col --col-7">
-        <partial src="components/forms/checkout.html"></partial>
+    <form action="" class="form --checkout">
+      <div class="row">
+        <div class="col --col-left">
+          <partial src="blocks/checkout-process/billing-info.html"></partial>
+          <partial src="blocks/checkout-process/delivery-service.html"></partial>
+          <partial src="blocks/checkout-process/payment-method.html"></partial>
+
+          <partial src="blocks/checkout-process/additional-informations.html"></partial>
+          <partial src="blocks/checkout-process/confirmation.html"></partial>
+        </div>
+        <div class="col --col-right">
+          <partial src="blocks/checkout-process/order-summary.html"></partial>
+        </div>
       </div>
-      <div class="col --col-5"></div>
-    </div>
+    </form>
   </div>
 </div>

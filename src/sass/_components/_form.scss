@@ -2,13 +2,21 @@
 
 .form-fieldset {
   @include indent-not-last-child("bottom", $indent_xxxxxl);
+
+  &.--bright {
+    padding: $indent_xxl $indent_m;
+    border-radius: $border-radius;
+    border: $border-grey-light;
+  }
 }
 
 .form-field {
-  label {
-    @extend %text-style_S6;
-    display: block;
-    margin-bottom: $indent_xxs;
+  &.--input-with-label {
+    label {
+      @extend %text-style_S6;
+      display: block;
+      margin-bottom: $indent_xxs;
+    }
   }
 }
 
@@ -27,22 +35,38 @@
 }
 
 .form {
-  .form-fieldset-list {
-    $list-gap: $indent_xl;
+  display: flex;
 
+  .form-fieldset-list {
     display: flex;
     flex-wrap: wrap;
     gap: $indent_s;
 
     @media #{$laptop-avg-and-up} {
-      gap: $list-gap;
+      gap: $indent_m;
     }
 
     .form-field {
       width: 100%;
+    }
+
+    &.--columns {
+      $list-gap: $indent_xxxl;
 
       @media #{$laptop-avg-and-up} {
-        width: calc(50% - #{$list-gap / 2});
+        gap: $list-gap;
+      }
+
+      .form-field {
+        @media #{$laptop-avg-and-up} {
+          width: calc(50% - #{$list-gap / 2});
+        }
+
+        &.--w-100 {
+          @media #{$laptop-avg-and-up} {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -60,11 +84,59 @@
     }
 
     .description {
-      @extend %text-style_Caption;
       color: $text-additional;
 
       display: flex;
       justify-content: space-between;
+
+      p {
+        @extend %text-style_Caption;
+      }
+    }
+  }
+
+  &.--checkout {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $indent_s;
+
+      @media #{$tablet-avg-and-up} {
+        flex-wrap: nowrap;
+      }
+
+      @media #{$laptop-avg-and-up} {
+        gap: $indent_xxxl;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+
+        &.--col-left {
+          width: 100%;
+
+          @media #{$tablet-avg-and-up} {
+            width: 50%;
+          }
+
+          @media #{$laptop-avg-and-up} {
+            width: 58.33333333%;
+          }
+        }
+
+        &.--col-right {
+          width: 100%;
+
+          @media #{$tablet-avg-and-up} {
+            width: 50%;
+          }
+
+          @media #{$laptop-avg-and-up} {
+            width: 41.66666667%;
+          }
+        }
+      }
     }
   }
 }

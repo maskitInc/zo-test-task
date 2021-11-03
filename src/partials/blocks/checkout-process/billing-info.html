@@ -1,0 +1,28 @@
+<fieldset class="form-fieldset">
+  <partial src="components/forms/legends/formfield-title.html" text-title="Billing info" text-description="Please enter your billing info" text-extra="Step 1 of 5"></partial>
+
+  <!-- <div class="row">
+    <div class="col --col-6"></div>
+    <div class="col --col-6"></div>
+  </div> -->
+
+  <div class="form-fieldset-list --columns">
+    <partial src="components/forms/fields/field--label-with-input--only.html" type-input="text" id-label="nameFirst" id-input="nameFirst" value-label="First name" value-input="First name"></partial>
+    <partial src="components/forms/fields/field--label-with-input--only.html" type-input="text" id-label="nameLast" id-input="nameLast" value-label="Last name" value-input="Last name"></partial>
+
+    <partial src="components/forms/fields/field--label-with-input--with-icon.html" type-input="email" id-label="emailAddress" id-input="emailAddress" value-label="Email address" value-input="Email address" styles-icon="" src-icon="img/icons.svg#ic-contact-mail"></partial>
+    <partial src="components/forms/fields/field--label-with-input--with-icon.html" type-input="tel" id-label="phoneNumber" id-input="phoneNumber" value-label="Phone number" value-input="Phone number" styles-icon="--flip-horizontal" src-icon="img/icons.svg#ic-contact-phone"></partial>
+
+    <partial src="components/forms/fields/field--label-with-input--only.html" type-input="text" id-label="address" id-input="address" value-label="Address" value-input="Address"></partial>
+    <partial src="components/forms/fields/field--label-with-input--only.html" type-input="text" id-label="townCity" id-input="townCity" value-label="Town / City" value-input="Town or City"></partial>
+
+    <partial src="components/forms/fields/field--label-with-input--only.html" type-input="text" id-label="stateCountry" id-input="stateCountry" value-label="State / Country" value-input="Choose a state or Country"></partial>
+    <partial src="components/forms/fields/field--label-with-input--only.html" type-input="text" id-label="zipPostalCode" id-input="zipPostalCode" value-label="ZIP/Postal code" value-input="Postal code or ZIP"></partial>
+  
+    <div class="form-field --w-100">
+      <partial src="elements/inputs/input--checkbox.html" id-label="shipDifferentAddress" type-input="checkbox" name-input="shipDifferentAddress" size-input="--m" style-input="--bright" id-input="shipDifferentAddress" value-input="Ship to a different address?"></partial>
+    </div>
+  
+  </div>
+
+</fieldset>
