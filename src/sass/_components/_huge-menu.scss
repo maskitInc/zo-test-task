@@ -31,25 +31,42 @@
         right: 0;
         width: 100%;
         height: 100%;
-        padding: $indent_m;
-        background: darken($primary, 5%);
         z-index: $z-index_modal;
 
         .huge-menu--container {
-          border-radius: $border-radius;
           overflow: hidden;
           flex-direction: column;
           background: $white;
-          box-shadow: $shadow_big;
 
-          .--hugeMenuClose {
+          .huge-menu--title {
             display: flex;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+            align-items: center;
+            padding: 0 $indent_m;
 
-            &:before {
-              border-top-left-radius: 0;
-              border-top-right-radius: 0;
+            h2 {
+              flex-grow: 1;
+            }
+
+            .btn.--l {
+              &.--right {
+                padding-bottom: $indent_s;
+                padding-right: 0;
+
+                .icon {
+                  margin-left: $indent_xxs;
+                }
+              }
+
+              .value {
+                font-family: $f-regular;
+                font-weight: $f-weight_normal;
+                font-size: $f-size_s;
+                color: $grey-lightest;
+              }
+
+              &:hover {
+                background: transparent;
+              }
             }
           }
         }
@@ -59,15 +76,18 @@
           flex-direction: column;
           flex-grow: 1;
           width: 100%;
-          border-top-left-radius: $border-radius;
-          border-top-right-radius: $border-radius;
+          padding: $indent_xs 0;
           overflow-x: hidden;
           overflow-y: auto;
-          border-bottom: 1px solid $grey-light;
+          border-top: 1px solid $grey-light;
 
           .btn.--with-icon {
             border-radius: 0;
             background: $white;
+          }
+
+          .dropdown-menu {
+            padding: 0 $indent_xs;
           }
         }
       }
@@ -88,7 +108,7 @@
     }
   }
 
-  .--hugeMenuClose {
+  .huge-menu--title {
     display: none;
   }
 

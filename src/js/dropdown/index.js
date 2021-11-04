@@ -55,3 +55,8 @@ $(document).on("click", function (e) {
     $(".dropdown-menu").removeClass("--showed");
   }
 });
+
+
+$(window).on('resize', function(e) {
+  $(".dropdown-menu").removeClass("--showed");
+});

@@ -88,8 +88,12 @@
   &.--with-icon {
     .icon {
       svg {
-        font-size: $icon-size_s;
+        font-size: $icon-size_xs;
       }
+    }
+
+    .value {
+      font-size: $f-size_base;
     }
 
     &.--only {
@@ -97,7 +101,7 @@
     }
 
     &.--right {
-      padding: $indent_xxs $indent_xxs $indent_xxs $indent_s;
+      padding: $indent_xxs $indent_xxs $indent_xxs $indent_xs;
 
       .icon {
         margin-left: $indent_xxs;
@@ -105,10 +109,10 @@
     }
 
     &.--left {
-      padding: $indent_xxs $indent_s $indent_xxs $indent_xxs;
+      padding: $indent_xxs $indent_xs $indent_xxs $indent_xxs;
 
       .icon {
-        margin-right: $indent_xxxs;
+        margin-right: $indent_xxs;
       }
     }
   }

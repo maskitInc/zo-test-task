@@ -20,6 +20,9 @@ $border-radius_medium: 10px;
 $border-radius: 12px;
 
 // Styles
+$border-grey-bright: $border-size solid $grey-bright;
+$border-grey-brightest: $border-size solid $grey-brightest;
+
 $border-grey-light: $border-size solid $grey-light;
 $border-grey-lightest: $border-size solid $grey-almost-white;
 
@@ -48,6 +51,8 @@ $shadow_small: $shadow-size $shadow-color--dark;
 $transform--show: translateY(0%) translateZ(0);
 $transform--hide--top: translateY(-120%) translateZ(0);
 $transform--hide--bottom: translateY(120%) translateZ(0);
+$transform--hide--left: translateX(-120%) translateZ(0);
+$transform--hide--right: translateX(120%) translateZ(0);
 
 
 // Icons

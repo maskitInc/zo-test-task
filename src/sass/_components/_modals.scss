@@ -1,0 +1,211 @@
+.modal {
+  // display: none;
+  // justify-content: flex-end;
+  position: fixed;
+  top: -99999999999px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $z-index_modal;
+
+  background: $modal-backdrop;
+  opacity: 0;
+  transition: top 0s linear 0.45s, opacity 0.3s ease 0.15s;
+
+  .modal-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    width: 100%;
+
+    box-shadow: 0px 20px 40px 0px rgba(29, 38, 32, 0.15);
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    padding: 0 $indent_m;
+    border-bottom: 1px solid $grey-light;
+
+    h2 {
+      flex-grow: 1;
+    }
+
+    .btn.--l {
+      &.--menuClose {
+        &.--right {
+          padding-bottom: $indent_s;
+          padding-right: 0;
+
+          .icon {
+            margin-left: $indent_xxs;
+          }
+        }
+
+        .value {
+          font-family: $f-regular;
+          font-weight: $f-weight_normal;
+          font-size: $f-size_s;
+          color: $grey-lightest;
+        }
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: $indent_m;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    p {
+      @extend %text-style_S5;
+      color: $grey-lightest;
+
+      &.--with-separator {
+        padding-bottom: $indent_l;
+        border-bottom: $border-grey-bright;
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 24px 0;
+      gap: 24px 0;
+
+      li {
+        position: relative;
+        width: 50%;
+      }
+
+      &.--benefits {
+        li {
+          $el-size: $indent_xl;
+          padding-left: $el-size + $indent_xs;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $el-size;
+            height: $el-size;
+            background-color: $primary;
+            border-radius: 50%;
+
+            flex-shrink: 0;
+            background-image: url("img/custom_icons/ic-actions-check.svg");
+            background-size: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent_s;
+    padding: $indent_s $indent_m $indent_xs $indent_m;
+    border-top: 1px solid $grey-light;
+
+    .subtotal {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      .label {
+        @extend %text-style_S6;
+      }
+
+      .price {
+        @extend %text-style_S2;
+        color: $primary;
+      }
+    }
+
+    .btn {
+      align-self: center;
+      width: 100%;
+
+      @media #{$mobile-avg-and-up} {
+        width: auto;
+      }
+    }
+  }
+
+  &[data-modal="cart"] {
+    @media #{$tablet-avg-and-up} {
+      padding: $indent_m;
+    }
+
+    .modal-container {
+      height: 100%;
+      margin-left: auto;
+
+      transform: translateX(120%);
+      transition: $transition-all;
+
+      @media #{$tablet-avg-and-up} {
+        max-width: 488px;
+        border-radius: $border-radius;
+      }
+    }
+
+    .modal-content {
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+  }
+
+  &[data-modal="profile"] {
+    padding: $indent_m;
+
+    .modal-container {
+      margin: auto;
+      align-self: baseline;
+      max-width: 488px;
+      border-radius: $border-radius;
+
+      transform: translateY(-120%);
+      transition: $transition-all;
+    }
+  }
+
+  &.--showed {
+    &[data-modal="profile"],
+    &[data-modal="cart"] {
+      top: 0;
+      opacity: 1;
+      transition: top 0s linear 0s, opacity 0.3s ease 0.05s;
+
+      .modal-container {
+        transition: all 0.5s ease 0.35s;
+      }
+    }
+
+    &[data-modal="profile"] {
+      .modal-container {
+        transform: translateY(0%);
+      }
+    }
+
+    &[data-modal="cart"] {
+      .modal-container {
+        transform: translateX(0%);
+      }
+    }
+  }
+}

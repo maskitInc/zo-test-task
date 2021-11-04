@@ -17,3 +17,9 @@ $("[data-btn-action='huge-menu--close']").on("click", function (e) {
 
   e.preventDefault();
 });
+
+
+
+$(window).on('resize', function(e) {
+  $(".huge-menu--list").removeClass("--showed");
+});

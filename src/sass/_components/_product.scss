@@ -27,10 +27,35 @@
     .actions {
       .btn {
         justify-content: flex-start;
+
+        .value {
+          @extend %text-style_Caption;
+          color: $grey-lightest;
+        }
+
+        &.--action-wishlist,
+        &.--action-compare {
+          .icon {
+            svg {
+              stroke: $counter-bg-cart;
+            }
+          }
+        }
+
+        &.--action-remove {
+          .icon {
+            svg {
+              stroke: $grey;
+            }
+          }
+        }
       }
     }
 
     .product-description {
+      position: relative;
+      z-index: 1;
+
       .product-title {
         @extend %text-style_S5;
         margin-bottom: $indent_xs;
@@ -63,8 +88,10 @@
     }
 
     .product-price {
-      margin-top: $indent_m;
+      margin-top: $indent_xs;
+      gap: $indent_xs;
       display: flex;
+      flex-wrap: wrap;
       width: 100%;
 
       .price {
@@ -79,6 +106,7 @@
 
         .discount {
           @extend %text-style_S6;
+          text-decoration: line-through;
           font-weight: $f-weight_medium;
           color: $grey-lightest;
         }
