@@ -27,3 +27,40 @@
     background: $color;
   }
 }
+
+@mixin stars($selector, $size: 16px, $margin: 4px) {
+  $stars_filled: url("img/custom_icons/ic-actions-star-f.svg");
+  $stars_stroked: url("img/custom_icons/ic-actions-star-s.svg");
+  $offset: -2px;
+
+  @at-root #{$selector} {
+    display: none;
+    position: relative;
+    height: $size;
+    flex-shrink: 0;
+    background-image: $stars_filled;
+    background-size: ($size + $margin) $size;
+    background-position-x: $offset;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $size;
+      width: (($size + $margin) * 5) - $margin;
+      flex-shrink: 0;
+      background-image: $stars_stroked;
+      background-size: ($size + $margin) $size;
+      background-position-x: $offset;
+      z-index: -1;
+    }
+  }
+
+  @each $star in 1, 2, 3, 4, 5 {
+    @at-root #{$selector}_#{$star} {
+      display: block;
+      width: (($size + $margin) * $star) - $margin;
+    }
+  }
+}

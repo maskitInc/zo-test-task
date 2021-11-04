@@ -3,24 +3,45 @@
   @import "_checkboxes-radios/_styles";
 
   display: inline-flex;
-  align-items: flex-start;
+  width: 100%;
+
+  @media #{$tablet-avg-and-up} {
+    width: auto;
+    align-items: flex-start;
+  }
 
   label {
     @extend %text-style_Body;
     display: flex;
+    cursor: pointer;
+
+    .icon {
+      border: $border-size_thick solid $grey-light;
+      border-radius: $border-radius_xsmall;
+      display: inline-flex;
+      min-width: $icon-size_l;
+      width: $icon-size_l;
+      height: $icon-size_l;
+      margin-right: $indent_xs;
+      background-color: $white;
+
+      svg {
+        opacity: 0;
+        stroke: $white;
+        stroke-width: 4px;
+      }
+    }
 
     .content {
-      display: flex;
+      display: inline-block;
       min-height: $icon-size_l;
       line-height: $icon-size_l;
 
       a {
+        @extend %link_underline;
+
         color: inherit;
         padding: 0 $indent_xxs;
-
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-decoration-color: inherit;
 
         &:last-of-type {
           padding-right: 0;
@@ -31,26 +52,6 @@
 
   input[type="checkbox"] {
     display: none;
-
-    & + label {
-      cursor: pointer;
-
-      .icon {
-        border: $border-size_thick solid $grey-light;
-        border-radius: $border-radius_xsmall;
-        display: inline-flex;
-        min-width: $icon-size_l;
-        width: $icon-size_l;
-        height: $icon-size_l;
-        margin-right: $indent_xs;
-        background-color: $white;
-
-        svg {
-          opacity: 0;
-          stroke: $white;
-        }
-      }
-    }
 
     &:disabled + label {
       .icon {

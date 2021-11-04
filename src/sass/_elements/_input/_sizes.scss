@@ -104,10 +104,46 @@
   }
 }
 
+&.--xs {
+  textarea,
+  input {
+    padding: $indent_xxs $indent_s;
+    font-size: $f-size_base;
+  }
+
+  &.--with-button {
+    input {
+      padding-right: 0;
+    }
+
+    .btn {
+      padding: $indent_xxxs $indent_xxs;
+    }
+  }
+
+  &.--with-button,
+  &.--with-icon {
+    .btn {
+      align-self: center;
+    }
+
+    .icon {
+      svg {
+        font-size: $icon-size_s;
+      }
+    }
+  }
+
+  &.--with-icon {
+    @include input-nested-element--offset--non-responsive("mobile", "icon", "right");
+  }
+}
+
 &.--s {
   textarea,
   input {
     padding: $indent_xs $indent_m;
+    font-size: $f-size_base;
   }
 
   &.--with-button {
@@ -115,7 +151,7 @@
       padding-right: 0;
     }
     .btn {
-      padding: $indent_xxs;
+      padding: $indent_xxs $indent_xs;
     }
   }
 
@@ -149,7 +185,7 @@
     }
 
     .btn {
-      padding: $indent_xs;
+      padding: $indent_xs $indent_s;
     }
   }
 
@@ -183,7 +219,7 @@
     }
 
     .btn {
-      padding: $indent_s;
+      padding: $indent_s $indent_m;
     }
   }
 

@@ -82,6 +82,38 @@
   }
 }
 
+&.--xs {
+  padding: $indent_xxs $indent_s;
+
+  &.--with-icon {
+    .icon {
+      svg {
+        font-size: $icon-size_s;
+      }
+    }
+
+    &.--only {
+      padding: $indent_xxs;
+    }
+
+    &.--right {
+      padding: $indent_xxs $indent_xxs $indent_xxs $indent_s;
+
+      .icon {
+        margin-left: $indent_xxs;
+      }
+    }
+
+    &.--left {
+      padding: $indent_xxs $indent_s $indent_xxs $indent_xxs;
+
+      .icon {
+        margin-right: $indent_xxxs;
+      }
+    }
+  }
+}
+
 &.--s {
   padding: $indent_xs $indent_m;
 

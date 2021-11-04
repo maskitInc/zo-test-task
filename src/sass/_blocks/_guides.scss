@@ -2,6 +2,8 @@
 @import "_guides/_guide-part";
 
 .guides {
+  padding-bottom: $indent_xxxxxxl;
+  
   h1 {
     color: $primary;
   }

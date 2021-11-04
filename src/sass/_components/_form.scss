@@ -38,6 +38,8 @@
   display: flex;
 
   .form-fieldset-list {
+    @include indent-not-last-child("bottom", $indent_xxl);
+
     display: flex;
     flex-wrap: wrap;
     gap: $indent_s;
@@ -67,6 +69,14 @@
             width: 100%;
           }
         }
+      }
+    }
+
+    .--confirmation {
+      margin-top: 24px;
+
+      @media #{$tablet-below-avg} {
+        width: 100%;
       }
     }
   }
@@ -114,9 +124,11 @@
         flex-direction: column;
 
         &.--col-left {
+          order: 1;
           width: 100%;
 
           @media #{$tablet-avg-and-up} {
+            order: 0;
             width: 50%;
           }
 
@@ -126,9 +138,13 @@
         }
 
         &.--col-right {
+          margin-bottom: $indent_xl;
+          order: 0;
           width: 100%;
 
           @media #{$tablet-avg-and-up} {
+            margin-bottom: 0;
+            order: 1;
             width: 50%;
           }
 

@@ -33,9 +33,11 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
 
-        @media #{$desktop-avg-and-up} {
-          padding-right: $indent_s;
-          padding-left: $indent_l;
+        &.--m {
+          @media #{$desktop-avg-and-up} {
+            padding-right: $indent_s;
+            padding-left: $indent_l;
+          }
         }
       }
     }
@@ -64,9 +66,14 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
 
-        @media #{$desktop-avg-and-up} {
-          padding-right: $indent_s;
-          padding-left: $indent_l;
+        &.--xs {
+        }
+
+        &.--m {
+          @media #{$desktop-avg-and-up} {
+            padding-right: $indent_s;
+            padding-left: $indent_l;
+          }
         }
       }
 
@@ -186,6 +193,18 @@
     .form-element {
       input {
         max-width: 72px;
+      }
+
+      &.--xs {
+        input {
+          max-width: 56px;
+        }
+      }
+
+      &.--m {
+        input {  
+          max-width: 72px;
+        }
       }
     }
   }

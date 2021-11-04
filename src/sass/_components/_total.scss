@@ -27,14 +27,13 @@
       font-weight: $f-weight_medium;
     }
 
+    &.--form-field {
+      margin: $indent_s 0 $indent_xl;
+    }
+
     &.--total {
       align-items: center;
       flex-wrap: wrap;
-      margin-top: $indent_xs;
-
-      @media #{$tablet-avg-and-up} {
-        margin-top: 0;
-      }
 
       .val {
         @extend %text-style_S2;

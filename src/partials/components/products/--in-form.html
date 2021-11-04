@@ -1,0 +1,58 @@
+<div class="product">
+  <div class="info --left">
+    <div class="photo">
+
+    </div>
+    <div class="actions">
+      <ul>
+        <li>
+          <partial src="elements/buttons/button--text-with-icon.html" styles-btn="--with-icon --s --left" value-btn="Wishlist" src-icon="img/icons.svg#ic-actions-heart"></partial>
+        </li>
+        <li>
+          <partial src="elements/buttons/button--text-with-icon.html" styles-btn="--with-icon --s --left" value-btn="Compare" src-icon="img/icons.svg#ic-layout-picture-right"></partial>
+        </li>
+        <li>
+          <partial src="elements/buttons/button--text-with-icon.html" styles-btn="--with-icon --s --left" value-btn="Remove" src-icon="img/icons.svg#ic-actions-close-simple"></partial>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="info --right">
+
+    <div class="product-description">
+      <div class="product-title">Product title</div>
+      <ul class="product-details">
+        <li class="product-details--i">
+          <div class="name">Farm:</div>
+          <div class="value">Tharamis Farm</div>
+        </li>
+        <li class="product-details--i">
+          <div class="name">Freshness:</div>
+          <div class="value">1 day old</div>
+        </li>
+      </ul>
+      <div class="product-rating product-rating_4"></div>
+    </div>
+
+    <div class="product-price">
+      <div class="price">
+        <div class="final">36.99 USD</div>
+        <div class="discount">48.56 USD</div>
+      </div>
+      <div class="quantity">  
+            
+        <div class="field --grouped-field --bright --flex-inline --rtl --mobile-row">
+          <div class="dropdown --simple">
+            <input name="productUnits" value="1pcs" type="text" hidden>
+            <partial src="elements/buttons/button--text-with-icon.html" id-dropdown="productUnits" action-btn="dropdown-select" styles-btn="dropdown-toggle --xs --with-icon --right --brightest" value-btn="Pcs" styles-icon="--primary" src-icon="img/icons.svg#ic-chevron-down"></partial>
+            <partial src="components/dropdowns/simple/units.html" behaviour-dropdown="--dropdown-select --dropdown"></partial>
+          </div>
+          <partial src="elements/inputs/input--only.html"  size-input="--xs" type-input="number" style-input="@@style-input" id-input="@@id-input" placeholder-input="1pcs"></partial>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,7 +1,12 @@
-<fieldset class="form-fieldset --bright">
+<fieldset class="form-fieldset --order-summary --bright">
   <partial src="components/forms/legends/formfield-title.html" text-title="Order Summary" text-description="Price can change depending on shipping method and taxes of your state." text-extra="  "></partial>
 
   <div class="form-fieldset-list">
+
+    <div class="product--list">
+      <partial src="components/products/--in-form.html"></partial>
+      <partial src="components/products/--in-form.html"></partial>
+      <partial src="components/products/--in-form.html"></partial>
 
     <div class="total">
       <div class="total-i --subtotal">
@@ -22,21 +27,17 @@
         </div>
         <div class="val">0 USD</div>
       </div>
-    </div>
-
-    <partial src="elements/inputs/input--with-button--button-text.html" type-input="text" size-input="--m --rtl --w-100" style-input="--bright" id-input="promoCode" styles-btn="--m --right --brightest" placeholder-input="Apply promo code" value-btn="Apply now"></partial>
-
-
-    <div class="total">
+      <div class="total-i --form-field">
+        <partial src="elements/inputs/input--with-button--button-text.html" type-input="text" size-input="--s --rtl --w-100" style-input="--bright" id-input="promoCode" styles-btn="--m --right --brightest" placeholder-input="Apply promo code" value-btn="Apply now"></partial>
+      </div>
       <div class="total-i --total">
         <div class="name">
           <b>Total Order</b>
-          <div class="extra">Guaranteed delivery day:  June 12, 2020</div>
+          <div class="extra">Guaranteed delivery day: June 12, 2020</div>
         </div>
         <div class="val">89.84 USD</div>
       </div>
     </div>
-
   </div>
 
 </fieldset>

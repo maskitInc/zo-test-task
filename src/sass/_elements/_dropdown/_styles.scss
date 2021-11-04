@@ -49,6 +49,10 @@
       // Fade in transition
       transition: top 0s linear 0s, opacity 0.2s ease 0.05s;
     }
+
+    &.--dropdownUnits {
+      min-width: 120px;
+    }
   }
 }
 

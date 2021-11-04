@@ -1,31 +1,31 @@
 &.--responsive {
   label {
-    padding: $indent_xs $indent_m;
+    padding: $indent_xs $indent_s $indent_xs $indent_xs;
 
     @media #{$tablet-avg-and-up} {
-      padding: $indent_s $indent_l;
+      padding: $indent_s $indent_m $indent_s $indent_s;
     }
 
     @media #{$desktop-avg-and-up} {
-      padding: $indent_m $indent_xl;
+      padding: $indent_m $indent_l $indent_m $indent_m;
     }
   }
 }
 
 &.--s {
   label {
-    padding: $indent_xs $indent_s;
+    padding: $indent_xs $indent_s $indent_xs $indent_xs;
   }
 }
 
 &.--m {
   label {
-    padding: $indent_s $indent_m;
+    padding: $indent_s $indent_m $indent_s $indent_s;
   }
 }
 
 &.--l {
   label {
-    padding: $indent_m $indent_xl;
+    padding: $indent_m $indent_l $indent_m $indent_m;
   }
 }
